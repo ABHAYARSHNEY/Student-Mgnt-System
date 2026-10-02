@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attendance - Student Management System</title><link rel="stylesheet" href="css/style.css"></head>
+<body><div class="sidebar">
+  <h2>SMS</h2>
+  <a href="index.html">Dashboard</a>
+  <a href="students.html">Students</a>
+  <a href="courses.html">Courses</a>
+  <a href="enrollments.html">Enrollments</a>
+  <a href="attendance.html">Attendance</a>
+</div><main class="main"><h1>Mark Attendance</h1>
+<form id="attendanceForm" class="form-grid">
+  <input type="number" id="student_id" min="1" placeholder="Student ID" required>
+  <input type="number" id="course_id" min="1" placeholder="Course ID" required>
+  <input type="date" id="date" required>
+  <select id="status"><option value="Present">Present</option><option value="Absent">Absent</option></select>
+  <button type="submit">Mark Attendance</button>
+</form>
+<h2>Attendance List</h2>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Student</th><th>Course</th><th>Date</th><th>Status</th></tr></thead><tbody id="attendanceTable"></tbody></table></div></main>
+<script src="js/store.js"></script><script src="js/attendance.js"></script></body></html>

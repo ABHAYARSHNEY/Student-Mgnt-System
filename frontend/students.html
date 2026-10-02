@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Students - Student Management System</title><link rel="stylesheet" href="css/style.css"></head>
+<body><div class="sidebar">
+  <h2>SMS</h2>
+  <a href="index.html">Dashboard</a>
+  <a href="students.html">Students</a>
+  <a href="courses.html">Courses</a>
+  <a href="enrollments.html">Enrollments</a>
+  <a href="attendance.html">Attendance</a>
+</div><main class="main"><h1>Students</h1>
+<form id="studentForm" class="form-grid">
+  <input type="text" id="name" placeholder="Name" required>
+  <input type="email" id="email" placeholder="Email" required>
+  <input type="tel" id="phone" placeholder="Phone" required>
+  <input type="text" id="department" placeholder="Department" required>
+  <button type="submit">Add Student</button>
+</form>
+<h2>Student List</h2>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Department</th><th>Action</th></tr></thead><tbody id="studentTable"></tbody></table></div></main>
+<script src="js/store.js"></script><script src="js/students.js"></script></body></html>

@@ -1,0 +1,8 @@
+{
+  "name": "studentmanagement",
+  "version": "1.0.0",
+  "description": "Student Management System using browser localStorage",
+  "scripts": {
+    "start": "node -e \"console.log('This version uses browser localStorage. Open frontend/index.html in a browser.')\""
+  }
+}
