@@ -1,25 +1,22 @@
-# Student Management System — LocalStorage Version
+# EduTrack — Student Management System
 
-This version uses **browser localStorage only**. It does NOT use MySQL, SQL, Express, a database, or a login backend.
+A professional, fully front-end student management app. Data is stored in your browser's **localStorage** — no server, database or `npm install` needed.
 
-## How to use
+## Run
+Open `frontend/index.html` (or the root `index.html`) in a browser.
+Click **Load sample data** on the dashboard to explore with demo records.
 
-1. Extract the ZIP.
-2. Open the `frontend` folder.
-3. Double-click `index.html`.
-4. Use Students, Courses, Enrollments and Attendance.
-5. Data is saved in your browser's localStorage and remains after refreshing the page.
+## Features (full CRUD on every page)
+| Page | Create | Read | Update | Delete |
+|---|---|---|---|---|
+| Students | modal form | search, sort, filter, paginate | edit | delete (cascades to enrollments & attendance) |
+| Courses | modal form | search, sort, filter, paginate | edit | delete (cascades) |
+| Enrollments | pick student + course from dropdowns | search, sort, filter | edit status/date/course | delete |
+| Attendance | single record **or** whole-class roll call | search, sort, filter by course/status/date | edit | delete |
 
-You do not need `npm install` or `npm start` for this version.
+Also: validation (unique email/course code, duplicate & capacity checks, enrolled-only attendance), toast notifications, confirm dialogs, CSV export per page, JSON backup/restore, dark mode, keyboard-accessible modals, responsive layout.
 
-## Storage
+## Storage keys
+`sms_students`, `sms_courses`, `sms_enrollments`, `sms_attendance` (+ `sms_theme`).
 
-The browser stores:
-- `sms_students`
-- `sms_courses`
-- `sms_enrollments`
-- `sms_attendance`
-
-## Important
-
-localStorage is browser/device-specific. Clearing browser site data will remove the saved records. It is suitable for a front-end college project/demo, but it is not a replacement for a shared production database.
+localStorage is browser/device-specific; clearing site data removes records. Use **Backup (JSON)** on the dashboard to keep a copy.

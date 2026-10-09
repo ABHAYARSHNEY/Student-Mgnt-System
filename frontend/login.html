@@ -1,6 +1,27 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Student Management System</title><link rel="stylesheet" href="css/style.css"></head>
-<body><main class="main login-card">
-<h1>Student Management System</h1><p>Admin login is not connected to an authentication backend in this project.</p>
-<a class="button-link" href="index.html">Open Dashboard</a></main><script src="js/store.js"></script></body></html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome · EduTrack</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="welcome">
+  <div class="welcome-card">
+    <div class="brand-mark" id="mark"></div>
+    <h1>EduTrack</h1>
+    <p>A clean, fast student management system. Everything runs in your browser — no server or sign-up needed.</p>
+    <ul class="feature-list" id="features"></ul>
+    <a class="btn btn-primary" href="index.html">Open Dashboard</a>
+  </div>
+</main>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script>
+  document.getElementById("mark").innerHTML = UI.icon("gradcap", 30);
+  document.getElementById("features").innerHTML = ["Manage students, courses and enrollments", "Take attendance for a whole class in seconds", "Search, sort, filter and export to CSV", "Light and dark themes, works on mobile"]
+    .map(t => `<li>${UI.icon("check", 18)}<span>${t}</span></li>`).join("");
+</script>
+</body>
+</html>
