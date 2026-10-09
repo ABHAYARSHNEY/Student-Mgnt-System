@@ -1,6 +1,7 @@
 # EduTrack — Student Management System
 
 A professional, fully front-end student management app. Data is stored in your browser's **localStorage** — no server, database or `npm install` needed.
+https://abhayarshney.github.io/Student-Mgnt-System/
 
 ## Run
 Open `frontend/index.html` (or the root `index.html`) in a browser.
